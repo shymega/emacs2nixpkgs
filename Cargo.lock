@@ -24,7 +24,7 @@ dependencies = [
  "cc",
  "serde",
  "serde_json",
- "tree-sitter 0.22.2",
+ "tree-sitter",
  "tree-sitter-elisp",
 ]
 
@@ -137,16 +137,6 @@ dependencies = [
 
 [[package]]
 name = "tree-sitter"
-version = "0.20.10"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "e747b1f9b7b931ed39a548c1fae149101497de3c1fc8d9e18c62c1a66c683d3d"
-dependencies = [
- "cc",
- "regex",
-]
-
-[[package]]
-name = "tree-sitter"
 version = "0.22.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "bdb9c9f15eae91dcd00ee0d86a281d16e6263786991b662b34fa9632c21a046b"
@@ -157,12 +147,11 @@ dependencies = [
 
 [[package]]
 name = "tree-sitter-elisp"
-version = "1.3.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "0a4473d216f582dac1777dfb64b70003d5efa6a77857672b6bdf376775d04f3b"
+version = "1.5.0"
+source = "git+https://github.com/shymega/tree-sitter-elisp?branch=shymega/bump-ver#b69c769fefc219d03ed027debc3ed527e53302ad"
 dependencies = [
  "cc",
- "tree-sitter 0.20.10",
+ "tree-sitter",
 ]
 
 [[package]]
