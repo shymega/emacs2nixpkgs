@@ -4,7 +4,7 @@
 ,
 }:
 rustPlatform.buildRustPackage {
-  name = "emacsconf2nix";
+  name = "emacs2nix";
 
   src = lib.cleanSource ./.;
 
@@ -17,8 +17,8 @@ rustPlatform.buildRustPackage {
   buildInputs = [ ];
 
   meta = with lib; {
-    description = "Emacs configuration parser, integrated with Nix.";
-    homepage = "https://github.com/shymega/emacsconf2nix";
+    description = "Emacs configuration parser, for use with Nix.";
+    homepage = "https://github.com/shymega/emacs2nix";
     license = licenses.mit;
   };
 }
