@@ -4,13 +4,12 @@
 ,
 }:
 rustPlatform.buildRustPackage {
-  name = "emacs2nix";
+  name = "emacs2nixpkg";
 
   src = lib.cleanSource ./.;
 
   cargoLock = {
     lockFile = ./Cargo.lock;
-    allowBuiltinFetchGit = true;
   };
 
   nativeBuildInputs = [ ];
@@ -18,7 +17,7 @@ rustPlatform.buildRustPackage {
 
   meta = with lib; {
     description = "Emacs configuration parser, for use with Nix.";
-    homepage = "https://github.com/shymega/emacs2nix";
+    homepage = "https://github.com/shymega/emacs2nixpkg";
     license = licenses.mit;
   };
 }

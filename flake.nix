@@ -1,4 +1,4 @@
-# SPDX-FileCopyrightText: 2023 The emacs2nix Developers
+# SPDX-FileCopyrightText: 2023 The emacs2nixpkg Developers
 #
 # SPDX-License-Identifier: Apache-2.0
 
@@ -23,8 +23,8 @@
         pkgs = nixpkgs.outputs.legacyPackages.${system};
       in
       {
-        packages.emacs2nix = pkgs.callPackage ./emacs2nix.nix { };
-        packages.default = self.outputs.packages.${system}.emacs2nix;
+        packages.emacs2nixpkg = pkgs.callPackage ./emacs2nixpkg.nix { };
+        packages.default = self.outputs.packages.${system}.emacs2nixpkg;
 
         devShells.default = self.packages.${system}.default.overrideAttrs (super: {
           nativeBuildInputs = with pkgs;
@@ -38,7 +38,7 @@
       })
     // {
       overlays.default = final: prev: {
-        inherit (self.packages.${final.system}) emacs2nix;
+        inherit (self.packages.${final.system}) emacs2nixpkg;
       };
     };
 }
