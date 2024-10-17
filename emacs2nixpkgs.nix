@@ -1,10 +1,9 @@
 { lib
-, pkgs ? import <nixpkgs>
 , rustPlatform
 ,
 }:
 rustPlatform.buildRustPackage {
-  name = "emacs2nixpkg";
+  name = "emacs2nixpkgs";
 
   src = lib.cleanSource ./.;
 
@@ -17,7 +16,7 @@ rustPlatform.buildRustPackage {
 
   meta = with lib; {
     description = "Emacs configuration parser, for use with Nix.";
-    homepage = "https://github.com/shymega/emacs2nixpkg";
+    homepage = "https://github.com/shymega/emacs2nixpkgs";
     license = licenses.mit;
   };
 }

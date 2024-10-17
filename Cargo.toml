@@ -1,5 +1,5 @@
 [package]
-name = "emacs2nixpkg"
+name = "emacs2nixpkgs-cli"
 version = "0.1.0"
 edition = "2021"
 
